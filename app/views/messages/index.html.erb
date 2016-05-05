@@ -1,0 +1,9 @@
+<h1>Messages</h1>
+
+<div class="messages">
+
+  <%= nested_messages @messages.arrange(:order => :created_at) %>
+
+</div>
+
+<%= render 'form' %>

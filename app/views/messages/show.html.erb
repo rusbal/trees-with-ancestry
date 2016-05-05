@@ -1,0 +1,10 @@
+<h1>This Message Tree</h1>
+
+<%= nested_messages @message.subtree.arrange(:order => :created_at) %>
+
+<p>
+  <%= link_to "Back to all messages", messages_path %>
+  <% if @message.parent %>
+    | <%= (link_to "Up the message tree", @message.parent) if @message.parent %>
+  <% end %>
+</p>
